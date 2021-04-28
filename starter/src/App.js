@@ -5,6 +5,8 @@ import 'popper.js';
 import 'jquery';
 import './Components/css/qa.css';
 import SignUp from './Components/Signup/Signup';
+import Header from './Components/Nav/Header'
+import Footer from './Components/Nav/Footer'
 
 function App() {
   const [users, setNewUser] = useState([]);
@@ -18,9 +20,11 @@ function App() {
 
   return (
     <div className="container">
+      <Header />
       <div className="container">
         <SignUp submitUser = {submitUser}/>
       </div>
+      <Footer />
     </div>
   );
 }
