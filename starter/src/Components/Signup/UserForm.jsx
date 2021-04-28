@@ -29,8 +29,8 @@ const UserForm = (props) =>{
     return (
         <form onSubmit={ handleSubmit } className="col-md-12">
             <div className="form-group">
-                <label htmlFor="userTitle" class="form-label">Title*:&nbsp;</label>
-                <select name="userTitle" class="form-control" value={userTitle} onChange={(e)=>{ setUserTitle(e.target.value) }}>
+                <label htmlFor="userTitle" className="form-label">Title*:&nbsp;</label>
+                <select name="userTitle" className="form-control" value={userTitle} onChange={(e)=>{ setUserTitle(e.target.value) }}>
                     <option value=""></option>
                     <option value="Mr.">Mr.</option>
                     <option value="Ms.">Ms.</option>
@@ -38,32 +38,32 @@ const UserForm = (props) =>{
                 </select>
             </div>
             <div className="form-group">
-                <label htmlFor="firstName" class="form-label">First Name*:&nbsp;</label>
-                <input type="text" class="form-control" name="firstName" value={ firstName }
+                <label htmlFor="firstName" className="form-label">First Name*:&nbsp;</label>
+                <input type="text" className="form-control" name="firstName" value={ firstName }
                         onChange={(e)=>{ setFirstName(e.target.value) }} ></input>
             </div>
             <div className="form-group">
-                <label htmlFor="lastName" class="form-label">Last Name*:&nbsp;</label>
-                <input type="text" class="form-control" name="lastName" value={ lastName }
+                <label htmlFor="lastName" className="form-label">Last Name*:&nbsp;</label>
+                <input type="text" className="form-control" name="lastName" value={ lastName }
                         onChange={(e)=>{ setLastName(e.target.value) }} ></input>
             </div>
             <div className="form-group">
-                <label htmlFor="email" class="form-label"> Email*:&nbsp;</label>
-                <input type="text" class="form-control" name="email" value={ email }
+                <label htmlFor="email" className="form-label"> Email*:&nbsp;</label>
+                <input type="text" className="form-control" name="email" value={ email }
                         onChange={(e)=>{ setEmail(e.target.value) }} ></input>
             </div>
             <div className="form-group">
-                <label htmlFor="phoneNumber" class="form-label">Phone nunmber:&nbsp;</label>
-                <input type="text" class="form-control" name="phoneNumber" value={ phoneNumber }
+                <label htmlFor="phoneNumber" className="form-label">Phone nunmber:&nbsp;</label>
+                <input type="text" className="form-control" name="phoneNumber" value={ phoneNumber }
                         onChange={(e)=>{ setPhoneNumber(e.target.value) }} ></input>
             </div>
-            <div className="form-group" class="form-label">
+            <div className="form-group" className="form-label">
                 <label htmlFor="userBirthDate">Date of Birth:&nbsp;</label>
-                <DatePicker class="form-control" selected={userBirth} onChange={date => setBirthDate(date)} />
+                <DatePicker className="form-control" selected={userBirth} onChange={date => setBirthDate(date)} />
             </div>
             <div className="form-group">
-                <label htmlFor="gender" class="form-label">Gender:&nbsp;</label>
-                <select name="gender" class="form-control" value={gender} onChange={(e)=>{ setGender(e.target.value) }}>
+                <label htmlFor="gender" className="form-label">Gender:&nbsp;</label>
+                <select name="gender" className="form-control" value={gender} onChange={(e)=>{ setGender(e.target.value) }}>
                     <option value=""></option>
                     <option value="Male">Male</option>
                     <option value="Female">Femnale</option>
