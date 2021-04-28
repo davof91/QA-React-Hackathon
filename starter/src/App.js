@@ -35,9 +35,7 @@ function App() {
           ) : (
             <SignUp submitUser = {submitUser}/>
           )
-        }
-       
-        
+        }        
       </div>
       <Footer />
     </div>
