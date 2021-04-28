@@ -11,7 +11,7 @@ import Footer from './Components/Nav/Footer'
 
 function App() {
   const [users, setNewUser] = useState([]);
-  const [currentUser, setCurrentUser ] = useState("Unknown User");
+  const [currentUser, setCurrentUser ] = useState("");
   const [currentPage, setPage] = useState("Home") 
 
   const submitUser = (user) => {

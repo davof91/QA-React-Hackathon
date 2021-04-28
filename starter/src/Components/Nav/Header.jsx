@@ -30,7 +30,14 @@ const Header = (props) => {
                     <ul className="navbar-nav">
                         <li className="nav-item"><a href="#" onClick={home} className="nav-link">Home</a></li>
                         <li className="nav-item"><a href="#" onClick={schedule} className="nav-link">Schedule</a></li>
-                        <li className="nav-item"><a href="#" onClick={signUp} className="nav-link">Sign-up</a></li>
+                        {
+                            props.userName != "" ? (
+                                <li className="nav-item"><a href="#" onClick={signUp} className="nav-link">{props.userName}</a></li>
+                            ) : (
+                                <li className="nav-item"><a href="#" onClick={signUp} className="nav-link">Sign-up</a></li>
+                            )
+                        }
+                        
                     </ul>
                 </div>
             </nav>
