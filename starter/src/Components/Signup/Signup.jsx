@@ -1,7 +1,6 @@
 import React from 'react';
 import UserForm from './UserForm';
 import PropTypes from 'prop-types';
-import generateTodoId from '../utils/generateId';
 import TopImage from '.../../../public/images/signup.jpg';
 
 const SignUp = (props) =>{

@@ -6,13 +6,17 @@ import 'jquery';
 import './Components/css/qa.css';
 import SignUp from './Components/Signup/Signup';
 import Home from './Components/Home/Home';
-import Header from './Components/Nav/Header'
-import Footer from './Components/Nav/Footer'
+import Schedule from './Components/Schedule/Schedule';
+import Header from './Components/Nav/Header';
+import Footer from './Components/Nav/Footer';
+import data from './data/cinemamockdata.json';
 
 function App() {
   const [users, setNewUser] = useState([]);
   const [currentUser, setCurrentUser ] = useState("");
   const [currentPage, setPage] = useState("Home") 
+  const [movies, setMovies] = useState(data.allFilms);
+  const [openingTimes, setOpeningTimes] = useState(data.openingTimes);
 
   const submitUser = (user) => {
     const updateUsers = [...users, user]
@@ -33,7 +37,7 @@ function App() {
           ) : currentPage == "Signup" ? (
             <SignUp submitUser = {submitUser}/>
           ) : (
-            <SignUp submitUser = {submitUser}/>
+            <Schedule movies={movies} openingTimes={openingTimes}/>
           )
         }        
       </div>
