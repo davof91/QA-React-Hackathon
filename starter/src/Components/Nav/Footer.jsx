@@ -3,8 +3,9 @@ import React from 'react';
 const Footer = () => {
     return (
         <>
-            <footer class="mt-auto py-3 text- center container">
-                ©QA Ltd 2019-
+            <hr/>
+            <footer className="container text-muted" id="footer-txt">
+                © QA Cinemas 2021
             </footer>
         </>
     );

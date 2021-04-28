@@ -1,6 +1,6 @@
 header,
 footer {
-  background-color: rgb(18, 234, 184);
+  /*background-color: rgb(18, 234, 184);*/
   color: rgb(0, 54, 80);
 }
 
@@ -40,16 +40,4 @@ a:hover {
 
 body {
   font-family: Montserrat;
-}
-
-.btn-primary {
-  background-color: rgb(0, 54, 80);
-  color: rgb(18, 234, 184);
-  border: 1px solid rgb(18, 234, 184);
-}
-
-.btn-primary:hover {
-  background-color: rgb(18, 234, 184);
-  color: rgb(0, 54, 80);
-  border: 1px solid rgb(0, 54, 80);
 }

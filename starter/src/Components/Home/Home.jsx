@@ -21,17 +21,18 @@ const Home = () => {
             
             <div className="container">
                 <div className="row">
-                    <div class="col">
+
+                    <div className="col">
                         <img 
                             src={house}
                             width="100%"/>
                     </div>
-                    <div class="col">
+                    <div className="col">
                         <img 
                         src={house2}
                          width="100%"/>
                     </div>
-                    <div class="col">
+                    <div className="col">
                         <img 
                         src={house}
                          width="100%"/>
