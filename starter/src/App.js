@@ -4,8 +4,8 @@ import 'bootstrap';
 import 'popper.js';
 import 'jquery';
 import './Components/css/qa.css';
-import Header from './Components/Header'
-import Footer from './Components/Footer'
+import Header from './Components/Nav/Header'
+import Footer from './Components/Nav/Footer'
 
 function App() {
   return (
