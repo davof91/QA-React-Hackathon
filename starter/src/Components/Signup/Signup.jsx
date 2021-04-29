@@ -2,10 +2,11 @@ import React from 'react';
 import UserForm from './UserForm';
 import PropTypes from 'prop-types';
 import TopImage from '.../../../public/images/signup.jpg';
+import generateTodoId from '../utils/generateId'
 
 const SignUp = (props) =>{
     const submitUser = (userTitle, firstName, lastName, email, phoneNumber, gender, userBirth) => {
-        console.log(userBirth);
+        let id = generateTodoId()
         props.submitUser({
             userTitle:userTitle, 
             firstName:firstName, 
@@ -13,7 +14,8 @@ const SignUp = (props) =>{
             email:email, 
             phoneNumber:phoneNumber, 
             gender:gender, 
-            userBirth:userBirth
+            userBirth:userBirth,
+            _id:id
         })
         
     }

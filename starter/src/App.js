@@ -14,6 +14,7 @@ import axios from 'axios';
 
 const ALLFILMSURL = 'http://localhost:4000/allFilms';
 const OPENINGTIMESURL = 'http://localhost:4000/openingTimes';
+const SIGNUPUSER = 'http://localhost:4000/signup';
 
 function App() {
   const [users, setNewUser] = useState([]);
@@ -34,9 +35,24 @@ function App() {
       setOpeningTimes(ot); 
     }
 
+    const getUsers = async () => { 
+      let su = await getSignUps();
+      console.log("Users")
+      if(Object.keys(su.users[0]).length === 0){
+        setNewUser([]); 
+      }
+      else{
+        setNewUser(su.users); 
+      }
+      console.log(su.users)
+      
+    }
+
     getMovies(); 
     getOpeningTimes();
+    getUsers();
   }, []);
+  
 
   const getFilms = async () => {
     try { 
@@ -68,10 +84,36 @@ function App() {
     } 
   };
 
-  const submitUser = (user) => {
-    const updateUsers = [...users, user]
-    setNewUser(updateUsers);
-    setCurrentUser(user.firstName+" "+user.lastName);
+  const getSignUps = async () => {
+    try { 
+      const res = await axios.get(SIGNUPUSER); 
+      return res.data.length ? { 
+        users: res.data 
+      } : {  
+        error: 'There are no films stored'
+      } ; 
+    } catch (e) { 
+      return { 
+        error: `Sign ups data not available from server: ${e.message}`
+      }; 
+    } 
+  };
+
+  const submitUser = async user => {
+    try {
+        const updateUsers = [...users, user]
+        setNewUser(updateUsers);
+        setCurrentUser(user.firstName+" "+user.lastName);
+        console.log(updateUsers)
+        await axios.post(SIGNUPUSER, user);
+      } catch (e) {
+        console.log(users)
+        const updateUsers = [...users, user]
+        setNewUser(updateUsers);
+        setCurrentUser(user.firstName+" "+user.lastName);
+        console.log("error")
+        
+    }
   }
 
   const submitPage = (page) => {

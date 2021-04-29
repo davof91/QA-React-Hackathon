@@ -9,7 +9,7 @@ import generateTodoId from '../utils/generateId'
 const Schedule = (props) => {
     let error = props.openingTimes.error? [props.openingTimes.error] : [];
     error = error.concat(props.openingTimes.error? [props.movies.error] : error.length>0 ? error: [] )
-    console.log(error)
+
     return (
         <>
             <div className="container">
