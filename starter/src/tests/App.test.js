@@ -2,8 +2,8 @@ import React from 'react';
 import { create } from 'react-test-renderer';
 import App from '../App';
 
-jest.mock("../Components/Header", () => () => <header id="mockHeader">Mock Header</header>);
-jest.mock("../Components/Footer", () => () => <footer id="mockFooter">Mock Footer</footer>);
+jest.mock("../Components/Nav/Header", () => () => <header id="mockHeader">Mock Header</header>);
+jest.mock("../Components/Nav/Footer", () => () => <footer id="mockFooter">Mock Footer</footer>);
 // Uncomment these tests when reviewing the tests for this component
 // jest.mock("../Components/AllTodos", () => () => <div id="mockAllTodos">Mock All Todos</div>);
 // jest.mock("../Components/AddEditTodo", () => () => <div id="mockAddEditTodo">Mock Add Edit Todos</div>);

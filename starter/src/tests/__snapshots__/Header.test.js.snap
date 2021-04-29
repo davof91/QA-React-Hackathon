@@ -1,28 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header matches snapshot 1`] = `
-<header>
+<header
+  className="container sticky-top"
+  id="qa-navbar"
+>
   <nav
-    class="navbar navbar-expand-sm"
+    className="navbar navbar-expand-md navbar-dark bg-dark"
   >
     <a
-      class="navbar-brand"
-      href="https://qa.com"
-      rel="noreferrer"
-      target="_blank"
-    >
-      <img
-        alt="QA Ltd"
-        src="qalogo.svg"
-        width="100"
-      />
-    </a>
-    <a
-      class="navbar-brand"
+      className="navbar-brand"
       href="/"
     >
-      Todo App
+      <img
+        alt="logo"
+        height={50}
+        src="../images/qa.jpeg"
+        width={50}
+      />
     </a>
+    <div
+      className="collapse navbar-collapse"
+      id="navbarNav"
+    >
+      <ul
+        className="navbar-nav"
+      >
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Schedule
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="#"
+            onClick={[Function]}
+          />
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>
 `;

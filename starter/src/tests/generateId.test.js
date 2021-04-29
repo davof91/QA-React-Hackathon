@@ -5,6 +5,6 @@ test(`it should return a string that matches the pattern`, () => {
 
     const testId = generateTodoId();
 
-    expect(idRegEx.test(testId)).toBe(true);
+    expect(idRegEx.test(testId)).toBe(true); 
 
 })

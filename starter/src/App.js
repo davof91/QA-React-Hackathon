@@ -57,6 +57,7 @@ function App() {
   const getFilms = async () => {
     try { 
       const res = await axios.get(ALLFILMSURL); 
+      console.log(res);
       return res.data.length ? { 
         movies: res.data 
       } : {  

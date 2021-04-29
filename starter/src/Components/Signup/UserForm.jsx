@@ -15,7 +15,6 @@ const UserForm = (props) =>{
     const [userBirth, setBirthDate] = useState(new Date());
 
     const handleSubmit  = event => {
-        console.log("We in!!")
         event.preventDefault();
         props.submitUser(userTitle, firstName, lastName, email, phoneNumber, gender, userBirth);
         setUserTitle("");
