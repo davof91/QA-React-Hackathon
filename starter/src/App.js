@@ -10,6 +10,7 @@ import Schedule from './Components/Schedule/Schedule';
 import Header from './Components/Nav/Header';
 import Footer from './Components/Nav/Footer';
 import data from './data/cinemamockdata.json';
+import axios from 'axios';
 
 function App() {
   const [users, setNewUser] = useState([]);

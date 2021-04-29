@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## To run json-server
+
+Run the following
+`json-server --watch ./src/data/cinemamockdata.json -p 4000 --id _id `
+
 ## Available Scripts
 
 In the project directory, you can run:
